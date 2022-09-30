@@ -1,0 +1,148 @@
+:root {
+    --color-lighter-blue: #435065;
+    --color-darker-blue: #363c51;
+    --color-theme: #71acc7;
+    --color-bg: #f7f8f9;
+    --color-alt: #9fba8f;
+    --color-white: #f7f2f0;
+    --color-black: #36383d;
+    --font: "Lato";
+}
+
+
+/* global things */
+body {
+    width: min(calc(100vw - 160px), 800px);
+    padding: 80px max(calc((100vw - 800px) / 2), 80px);
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-family: var(--font);
+    background-color: var(--color-bg);
+    color: var(--color-black);
+}
+
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* common */
+a {
+    color: var(--color-black);
+    text-decoration: none;
+    border-bottom: 2px solid var(--color-theme);
+}
+
+a:hover {
+    color: var(--color-theme);
+    text-decoration: none;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 8px 0;
+    align-items: top;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.italic {
+    font-style: italic;
+}
+
+
+/* top row */
+.navbar {
+    position: fixed;
+    padding: 16px 32px;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: calc(100vw - 64px);
+    max-width: 100%;
+    background-image: linear-gradient(24deg, var(--color-lighter-blue) 0%, var(--color-lighter-blue) 70%, var(--color-darker-blue) 70%);
+    color: var(--color-white);
+    
+}
+
+.navbar-item {
+    font-weight: 300;
+    font-size: 20px !important;
+}
+
+/* section */
+.section {
+    font-size: 15px;
+    line-height: 24px;
+    padding: 36px 0;
+    border-bottom: 1px solid #e0e1e4;
+}
+
+.section>h1 {
+    font-size: 24px;
+    color: var(--color-lighter-blue);
+    margin-bottom: 24px;
+    font-weight: 400;
+}
+
+.section>h2 {
+    font-size: 18px;
+    color: var(--color-black);
+    margin-top: 28px;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+/* intro photo */
+img.photo {
+    margin-right: 32px;
+}
+
+@media screen and (max-width: 600px) {
+    .flex-row.adaptive {
+        flex-direction: column;
+    }
+    img.photo {
+        margin-right: 0;
+    }
+}
+
+/* cells in tables */
+
+.bullet {
+    vertical-align: top;
+}
+
+.content-cell {
+    overflow: hidden;
+    width: min(calc(100vw - 336px), 664px);
+    flex-wrap: wrap;
+    margin-right: 16px;
+    margin-left: 8px;
+    overflow-x: visible;
+}
+
+.date-cell {
+    width: 160px;
+    text-align: end;
+}
+
+.content-numbering {
+    width: 30px;
+    margin-right: 8px;
+}
